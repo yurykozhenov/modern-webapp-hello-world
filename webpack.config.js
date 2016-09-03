@@ -1,5 +1,6 @@
 // const webpack = require('webpack');
 // const NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -24,11 +25,18 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file?name=public/fonts/[name].[ext]'
       }
     ]
   },
-  // noParse: modulesDirPath,
+  // noParse: modulesDirPath,  // Optimize compilation speed
   plugins: [
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      template: 'src/index.html'
+    })
     /* new webpack.ProvidePlugin({  // This plugin creates global variable
       angular: 'angular'
     }),*/
