@@ -1,5 +1,5 @@
-// const webpack = require('webpack');
-// const NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
+const webpack = require('webpack');
+const NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -32,14 +32,15 @@ module.exports = {
       }
     ]
   },
-  // noParse: modulesDirPath,  // Optimize compilation speed
+  // noParse: /node_modules/,  // Optimize compilation speed
   plugins: [
-    new HtmlWebpackPlugin({  // Also generate a test.html
+    new HtmlWebpackPlugin({  // Generate index.html into destination folder
       template: 'src/index.html'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
-    /* new webpack.ProvidePlugin({  // This plugin creates global variable
-      angular: 'angular'
-    }),*/
     /* new NgAnnotatePlugin({add: true}),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -50,6 +51,6 @@ module.exports = {
       output: {
         comments: false
       }
-    }) */
+    })*/
   ]
 };
