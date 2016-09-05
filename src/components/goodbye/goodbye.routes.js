@@ -1,4 +1,5 @@
-export default function($stateProvider) {
+// @ngInject
+export default function router($stateProvider) {
   $stateProvider
     .state('goodbye', {
       url: '/goodbye',

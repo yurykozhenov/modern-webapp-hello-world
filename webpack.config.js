@@ -23,7 +23,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'ng-annotate!babel', // FIXME: ng-annotate loader doesn't work
+        loader: 'ng-annotate!babel',
         exclude: /node_modules/
       },
       {

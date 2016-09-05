@@ -1,4 +1,6 @@
-export default function($urlRouterProvider, $locationProvider, $stateProvider) {
+// @ngInject
+export default function router($urlRouterProvider, $locationProvider,
+    $stateProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider

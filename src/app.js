@@ -14,5 +14,5 @@ angular.module('app', [
   .config(routing);
 
 angular.bootstrap(document, ['app'], {
-  strictDi: false
+  strictDi: true
 });
