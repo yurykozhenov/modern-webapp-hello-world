@@ -1,6 +1,8 @@
 # modern-webapp-hello-world
 Node 6 + Angular 1.5 + UI Router + Webpack + ES6 + Babel + NPM + Bootstrap
 
+Branch for ionic version
+
 NPM tasks:
 - `npm start`: Start local http server
 - `npm run clean`: Remove destination folder
