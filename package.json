@@ -2,9 +2,9 @@
   "name": "modern-webapp-hello-world",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "main.js",
   "scripts": {
-    "start": "npm run webpack && http-server ./dest -p 8080",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r dest/",
     "webpack": "webpack",
@@ -43,6 +43,7 @@
     "webpack": "^1.13.2"
   },
   "devDependencies": {
+    "electron-prebuilt": "^1.2.0",
     "eslint": "^3.4.0",
     "eslint-config-google": "^0.6.0",
     "gulp": "^3.9.1",
