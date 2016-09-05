@@ -1,7 +1,7 @@
 // Non angular dependencies
 import 'jquery';
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/less/bootstrap.less';
 
 // Angular modules
 import 'angular';
