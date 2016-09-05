@@ -48,7 +48,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'src/index.html',
-        to: 'dest/index.html'
+        to: 'index.html'
       }
     ]),
     new CleanWebpackPlugin([
