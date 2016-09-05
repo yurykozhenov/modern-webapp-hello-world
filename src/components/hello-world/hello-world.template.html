@@ -1,1 +1,15 @@
 <h1 class="text-center">{{$ctrl.text}}</h1>
+
+<ul class="nav nav-tabs">
+  <li ui-sref-active="active">
+    <a ui-sref="hello.someone({someone: 'Lord'})">Lord</a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="hello.someone({someone: 'Stranger'})">Stranger</a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="hello.someone({someone: 'h4x0r'})">Hacker</a>
+  </li>
+</ul>
+
+<ui-view></ui-view>

@@ -17,5 +17,13 @@ export default function($stateProvider) {
       url: '/goodbye',
       // component: 'goodbyeWorld' // FIXME: Make this work!
       template: '<goodbye-world></goodbye-world>'
+    })
+    .state('hello.someone', {
+      url: '/{someone}',
+      template: '<h3 class="text-center">Hello, {{$ctrl.someone}}!</h3>',
+      controller: function($stateParams) {
+        this.someone = $stateParams.someone;
+      },
+      controllerAs: '$ctrl'
     });
 }
