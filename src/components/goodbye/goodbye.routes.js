@@ -8,19 +8,15 @@ class ResolveController {
 // @ngInject
 export default function router($stateProvider) {
   $stateProvider
-    .state('root.goodbye', {
-      url: 'goodbye',
-      views: {
-        '': {
-          template: '<goodbye-world goodbye="$resolve.goodbye"></goodbye-world>',
-          controller: ResolveController,
-          controllerAs: '$resolve',
-          resolve: {
-            // @ngInject
-            goodbye() {
-              return {value: 'Goodbye'};
-            }
-          }
+    .state('goodbye', {
+      url: '/goodbye',
+      template: '<goodbye-world goodbye="$resolve.goodbye"></goodbye-world>',
+      controller: ResolveController,
+      controllerAs: '$resolve',
+      resolve: {
+        // @ngInject
+        goodbye() {
+          return {value: 'Goodbye'};
         }
       }
     });
