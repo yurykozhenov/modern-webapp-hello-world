@@ -16,16 +16,23 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   devtool: '#inline-source-map',
+  resolve: {
+    root: path.resolve(__dirname, './src')
+  },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['ng-annotate', 'babel'],
+        loader: 'ng-annotate!babel',
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.less$/,
+        loader: 'style!css!less'
       },
       {
         test: /\.html$/,
@@ -34,6 +41,10 @@ module.exports = {
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file?name=public/fonts/[name].[ext]'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'file?name=assets/img/[name].[ext]'
       }
     ]
   },
