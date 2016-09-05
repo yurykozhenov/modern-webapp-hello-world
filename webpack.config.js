@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const DESTINATION_FOLDER = path.resolve(__dirname, './www');
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
     deps: path.resolve(__dirname, './src/deps.js')
   },
   output: {
-    path: path.resolve(__dirname, './dest'),
+    path: DESTINATION_FOLDER,
     filename: '[name].bundle.js'
   },
   devtool: '#inline-source-map',
@@ -63,7 +64,7 @@ module.exports = {
       }
     ]),
     new CleanWebpackPlugin([
-      'dest'
+      DESTINATION_FOLDER
     ])
   ].concat(PRODUCTION ? [
     new webpack.optimize.UglifyJsPlugin({

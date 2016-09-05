@@ -5,7 +5,9 @@
     "browser": true
   },
   "globals": {
-    "angular": true
+    "angular": true,
+    "cordova": true,
+    "StatusBar": true
   },
   "rules": {
     "quotes": ["error", "single"],
