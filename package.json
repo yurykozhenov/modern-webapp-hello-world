@@ -6,10 +6,9 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -r dest/",
-    "webpack": "webpack",
-    "webpack:livereload": "webpack-dev-server --content-base dest/ --hot --inline",
-    "webpack:watch": "webpack --watch"
+    "bundle": "webpack",
+    "watch": "webpack --watch",
+    "livereload": "webpack-dev-server --content-base dest/ --hot --inline"
   },
   "repository": {
     "type": "git",
