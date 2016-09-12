@@ -2,15 +2,12 @@
   "extends": "google",
   "env": {
     "node": true,
-    "browser": true
-  },
-  "globals": {
-    "angular": true,
+    "browser": true,
     "cordova": true,
     "StatusBar": true
   },
   "rules": {
     "quotes": ["error", "single"],
-    "require-jsdoc": 0
+    "require-jsdoc": "off"
   }
 }

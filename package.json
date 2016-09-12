@@ -10,6 +10,9 @@
     "webpack": "webpack",
     "webpack:livereload": "webpack-dev-server --content-base dest/ --hot --inline",
     "webpack:watch": "webpack --watch",
+    "bundle": "webpack",
+    "watch": "webpack --watch",
+    "livereload": "webpack-dev-server --content-base dest/ --hot --inline",
     "bower": "bower install",
     "build": "npm run webpack && npm run bower"
   },
