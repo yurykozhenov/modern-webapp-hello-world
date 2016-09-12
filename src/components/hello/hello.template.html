@@ -1,17 +1,20 @@
-<h1 class="text-center">{{$ctrl.text}}</h1>
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+        <span class="md-headline">
+          {{$ctrl.text}}
+          <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-sref="hello.someone({someone: 'Lord'})" name="Lord">Lord</md-nav-item>
+            <md-nav-item md-nav-sref="hello.someone({someone: 'Stranger'})" name="Stranger">Stranger</md-nav-item>
+            <md-nav-item md-nav-sref="hello.someone({someone: 'h4x0r'})" name="Hacker">Hacker</md-nav-item>
+          </md-nav-bar>
+        </span>
+      </md-card-title-text>
+  </md-card-title>
 
-<ul class="nav nav-tabs">
-  <li ui-sref-active="active">
-    <a ui-sref="hello.someone({someone: 'Lord'})">Lord</a>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="hello.someone({someone: 'Stranger'})">Stranger</a>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="hello.someone({someone: 'h4x0r'})">Hacker</a>
-  </li>
-</ul>
-
-<ui-view></ui-view>
-
-<img src="assets/img/cat.jpg" alt="Cat" style="height: 500px; width:100%;" />
+  <md-card-title-media>
+    <div class="md-media-lg card-media" layout="column" layout-align="center center">
+      <ui-view></ui-view>
+    </div>
+  </md-card-title-media>
+</md-card>
