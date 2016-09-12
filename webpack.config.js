@@ -40,19 +40,15 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=public/fonts/[name].[ext]'
+        loader: 'file?name=fonts/[name].[ext]'
       },
       {
         test: /\.(jpe?g|png|gif)$/,
-        loader: 'file?name=assets/img/[name].[ext]'
+        loader: 'file?name=img/[name].[ext]'
       }
     ]
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'deps'
     }),

@@ -1,7 +1,7 @@
 import angular from 'angular';
 import angularMaterial from 'angular-material';
 
-import routing from './app.routes';
+import routing from './config/routing';
 import icons from './config/icons';
 import theme from './config/theme';
 
@@ -10,7 +10,10 @@ import hello from './components/hello';
 import goodbye from './components/goodbye';
 
 angular.module('app', [
+  // Vendor modules
   angularMaterial,
+
+  // App modules
   navbar,
   hello,
   goodbye
