@@ -1,0 +1,24 @@
+// Fix md-input-container inconsistent size with md-select inside
+md-input-container {
+  md-select {
+    margin-bottom: 24px;
+  }
+}
+
+md-card-content[layout-padding] {
+  padding-top: 35px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media only screen and (max-width: 991px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+md-card {
+  md-tabs-wrapper {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+}

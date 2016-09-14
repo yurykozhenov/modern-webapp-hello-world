@@ -35,6 +35,10 @@ module.exports = {
         loader: 'style!css!less'
       },
       {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+      },
+      {
         test: /\.html$/,
         loader: 'raw'
       },

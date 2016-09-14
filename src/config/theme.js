@@ -2,7 +2,7 @@
 export default $mdThemingProvider => {
   $mdThemingProvider.definePalette('customBlue', {
     50: '#9BBBDD',
-    100: '#87ADD6',
+    100: '#ffffff', // XXX: Text color in unactive tab
     200: '#739FD0',
     300: '#5F92C9',
     400: '#4B84C2',

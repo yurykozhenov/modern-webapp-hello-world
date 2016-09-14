@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack",
     "watch": "webpack --watch",
-    "livereload": "webpack-dev-server --content-base dest/ --hot --inline"
+    "livereload": "webpack-dev-server --hot --inline"
   },
   "repository": {
     "type": "git",
@@ -26,27 +26,28 @@
     "angular-aria": "^1.5.8",
     "angular-material": "^1.1.1",
     "angular-ui-router": "^0.3.1",
+    "material-design-icons": "^3.0.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "clean-webpack-plugin": "^0.1.10",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.24.0",
+    "eslint": "^3.4.0",
+    "eslint-config-google": "^0.6.0",
     "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.22.0",
     "http-server": "^0.9.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "material-design-icons": "^3.0.1",
     "ng-annotate-loader": "^0.1.1",
     "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2"
-  },
-  "devDependencies": {
-    "eslint": "^3.4.0",
-    "eslint-config-google": "^0.6.0",
-    "gulp": "^3.9.1",
+    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1",
     "webpack-stream": "^3.2.0"
   }

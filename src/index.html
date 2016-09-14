@@ -2,14 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelloWorldApp</title>
   </head>
   <body>
     <navbar></navbar>
 
-    <md-content layout="row" layout-align="center center">
-      <ui-view></ui-view>
-    </md-content>
+    <main layout="row" layout-align="center stretch">
+      <md-content flex="66">
+        <ui-view></ui-view>
+      </md-content>
+    </main>
 
     <script src="deps.bundle.js"></script>
     <script src="app.bundle.js"></script>

@@ -1,0 +1,234 @@
+<md-card>
+  <md-tabs md-dynamic-height md-stretch-tabs="always" class="md-primary white-tabs-icons">
+
+    <!-- PERSONAL TAB -->
+    <md-tab>
+      <md-tab-label>
+        <md-icon>account_circle</md-icon>
+        <span hide-sm>Personal</span>
+      </md-tab-label>
+      <md-tab-body>
+        <md-card-content layout="row" layout-padding>
+          <div flex="50">
+
+            <md-input-container class="md-block">
+              <label>First Name:</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Middle Name:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Last Name</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block md-input-has-value">
+              <label>Sex:</label>
+              <md-select ng-model="$ctrl.gender" required>
+                <md-option value="male">Male</md-option>
+                <md-option value="female">Female</md-option>
+                <md-option value="other">Other</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Date of Birth:</label>
+              <md-datepicker ng-model="$ctrl.birthday" md-open-on-focus></md-datepicker>
+            </md-input-container>
+
+          </div>
+          <div flex="50">
+            <md-input-container class="md-block">
+              <label>Email:</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Mobile Phone:</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Driver License No:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block md-input-has-value">
+              <label>Licensing State</label>
+              <md-select ng-model="$ctrl.licensingState">
+                <md-option ng-repeat="state in $ctrl.states" value="{{ state }}">{{ state }}</md-option>
+              </md-select>
+            </md-input-container>
+
+          </div>
+        </md-card-content>
+      </md-tab-body>
+    </md-tab>
+
+    <!-- HOME ADDRESS TAB -->
+    <md-tab>
+      <md-tab-label>
+        <md-icon>home</md-icon>
+        <span hide-sm>Home Address</span>
+      </md-tab-label>
+      <md-tab-body>
+        <md-card-content layout="row" layout-padding>
+          <div flex="50">
+
+            <md-input-container class="md-block">
+              <label>Street Address 1:</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Street Address 2:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>City:</label>
+              <input type="text" required>
+            </md-input-container>
+
+          </div>
+          <div flex="50">
+            <md-input-container class="md-block md-input-has-value">
+              <label>State</label>
+              <md-select ng-model="$ctrl.homeState">
+                <md-option ng-repeat="state in $ctrl.states" value="{{ state }}">{{ state }}</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Zip Code:</label>
+              <input type="text" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Home Phone:</label>
+              <input type="text">
+            </md-input-container>
+
+          </div>
+        </md-card-content>
+      </md-tab-body>
+    </md-tab>
+
+    <!-- WORK ADDRESS TAB -->
+    <md-tab>
+      <md-tab-label>
+        <md-icon>business</md-icon>
+        <span hide-sm>Work Address</span>
+      </md-tab-label>
+      <md-tab-body>
+        <md-card-content layout="row" layout-padding>
+          <div flex="50">
+            <md-input-container class="md-block">
+              <label>Employer Name:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Street Address 1:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Street Address 2:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>City:</label>
+              <input type="text" required>
+            </md-input-container>
+
+          </div>
+          <div flex="50">
+            <md-input-container class="md-block">
+              <label>State</label>
+              <md-select ng-model="$ctrl.workState">
+                <md-option ng-repeat="state in $ctrl.states" value="{{ state }}">{{ state }}</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Zip Code:</label>
+              <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Work Phone:</label>
+              <input type="text">
+            </md-input-container>
+
+          </div>
+        </md-card-content>
+      </md-tab-body>
+    </md-tab>
+
+    <!-- AGENCY TAB -->
+    <md-tab>
+      <md-tab-label>
+        <md-icon>verified_user</md-icon>
+        <span hide-sm>Agency</span>
+      </md-tab-label>
+      <md-tab-body>
+        <md-card-content layout="row" layout-padding>
+          <div flex="50">
+            <md-input-container class="md-block md-input-has-value">
+              <label>Default Agency:</label>
+              <md-select ng-model="$ctrl.defaultAgency" required>
+                <md-option ng-repeat="state in $ctrl.states" value="{{ state }}">{{ state }}</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+          <div flex="50">
+            <md-input-container class="md-block md-input-has-value">
+              <label>Secondary Agency:</label>
+              <md-select ng-model="$ctrl.secondaryAgency">
+                <md-option ng-repeat="state in $ctrl.states" value="{{ state }}">{{ state }}</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+        </md-card-content>
+      </md-tab-body>
+    </md-tab>
+
+    <!-- PASSWORD TAB -->
+    <md-tab>
+      <md-tab-label>
+        <md-icon>lock</md-icon>
+        <span hide-sm>Password</span>
+      </md-tab-label>
+      <md-tab-body>
+        <md-card-content layout="row" layout-padding>
+          <div flex="50">
+            <md-input-container class="md-block">
+              <label>Password:</label>
+              <input type="password" required>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>New Password:</label>
+              <input type="password" required>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Confirm New Password:</label>
+              <input type="password" required>
+            </md-input-container>
+          </div>
+          <!-- <div flex></div> -->
+        </md-card-content>
+      </md-tab-body>
+    </md-tab>
+
+  </md-tabs>
+  <md-card-actions class="actions-padding stick-to-bottom">
+    <md-button class="md-raised">Cancel</md-button>
+    <md-button class="md-raised md-primary">Save</md-button>
+  </md-card-actions>
+</md-card>
