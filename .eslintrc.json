@@ -4,6 +4,9 @@
     "node": true,
     "browser": true
   },
+  "globals": {
+    "angular": true
+  },
   "rules": {
     "quotes": ["error", "single"],
     "require-jsdoc": "off"

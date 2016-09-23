@@ -1,5 +1,5 @@
-import angular from 'angular';
 import angularMaterial from 'angular-material';
+import uirouter from 'angular-ui-router';
 
 import './styles/main.scss';
 
@@ -15,7 +15,7 @@ import profile from './components/profile';
 angular.module('app', [
   // Vendor modules
   angularMaterial,
-
+  uirouter,
   // App modules
   navbar,
   hello,
